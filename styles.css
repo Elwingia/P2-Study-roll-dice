@@ -1,0 +1,64 @@
+
+
+
+
+
+button.newgame {
+    border: 2px solid;
+    border-radius: 50%;
+    margin: 20px;
+}
+
+.newgamearea {
+    display: flex;
+
+}
+
+.contentarea {
+    font-size: 45px;
+    border: 1px solid;
+    box-shadow: 5px 5px 5px black;
+    padding: 50px;
+    background-color: grey;
+
+}
+
+.score {
+    color: white;
+    font-size: 25px;   
+    border: 1px solid; 
+    background-color: darkgray;
+    width: 150px;
+    
+}
+
+
+.imgdes {
+
+    box-shadow: 5px 5px 5px black;
+    
+}
+
+nav {
+    background-color: #ffff;
+}
+
+.rotate,
+.hold {
+
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+   
+}
+
+.texticon {
+    font-size: 20px;
+    padding-top: 25px;
+
+}
+
+.bodybg {
+    background-color: rgb(46, 46, 48);
+    font-family: 'Lato', sans-serif;
+}

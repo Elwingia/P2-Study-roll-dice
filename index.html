@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+        
+
+    <title>Jeu de dès</title>
+</head>
+
+<body class="bodybg"> 
+    <header>
+        <nav class="navbar">
+            <form class="container-fluid justify-content-center gap-2">
+                <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Règle du jeu
+                </button>
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="btn btn-light" type="button"
+                    target="_blank">Autres jeux</a>
+            </form>
+        </nav>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Règle du jeu</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Règles :</br></br>
+                            Le jeu comprend 2 joueurs sur un seul et même écran.</br>
+                            Chaque joueur possède un score temporaire (ROUND) et un score global (GLOBAL).</br></br>
+                            À chaque tour, le joueur a son ROUND initialisé à 0 et peut lancer un dé autant de fois
+                            qu'il le souhaite.</br></br>
+                            Le résultat d’un lancer est ajouté au ROUND.</br></br>
+                            Lors de son tour, le joueur peut décider à tout moment de:</br></br>
+                            - Cliquer sur l’option “Hold”, qui permet d’envoyer les points du ROUND vers le GLOBAL. Ce
+                            sera alors le
+                            tour de l’autre joueur.</br></br>
+                            - Lancer le dé. S’il obtient un 1, son score ROUND est perdu et c’est la fin de son tour.
+                            Le premier joueur qui atteint les 100 points sur global gagne le jeu.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+
+        <section>
+            <div class="container text-center contentarea">
+                <section class="d-flex justify-content-center">
+                    <div class="newgamearea">
+                        <button type="button" id="newGame" class="btn btn-light btn-lg newgame">+</button>
+                        <div class="align-self-center">Nouvelle partie</div>
+                    </div>
+                </section>
+
+                <div class="row">
+                    <div class="col">
+                        <p>Player 1</p>
+                    </div>
+                    <div class="col">
+                        <p>Player 2</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-3 score">
+                        <p>Score actuel : <span id="roundScore1">0</span></p>
+                        <p>Score global : <span id="globalScore1">0</span></p>
+                    </div>
+
+                    <div class="col">
+                        <img src="dice-1.png" alt="Dé 1" id="dice-1" class="imgdes">
+                        <img src="dice-2.png" alt="Dé 2" id="dice-2" class="imgdes" style="display: none;">
+                        <img src="dice-3.png" alt="Dé 3" id="dice-3" class="imgdes" style="display: none;">
+                        <img src="dice-4.png" alt="Dé 4" id="dice-4" class="imgdes" style="display: none;">
+                        <img src="dice-5.png" alt="Dé 5" id="dice-5" class="imgdes" style="display: none;">
+                        <img src="dice-6.png" alt="Dé 6" id="dice-6" class="imgdes" style="display: none;">
+                    </div>
+                    <div class="col-3  score">
+                        <p class="scorebg">Score actuel : <span id="roundScore2">0</span></p>
+                        <p>Score global : <span id="globalScore2">0</span></p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                    </div>
+                    <div class="col texticon">
+                        <button class="btn btn-light" type="button" id="rollDice">ROLL DICE</button>
+                        <button class="btn btn-light" type="button" id="hold">HOLD</button>
+                    </div>
+                    <div class="col">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="scrypt.js"></script>
+</body>
+
+</html>
